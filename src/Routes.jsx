@@ -4,12 +4,16 @@ import PropTypes from 'prop-types';
 import { AuthContext } from './context/authContext';
 import SignUp from './pages/SignUp';
 import AppShell from './AppShell';
+import SignIn from './pages/SignIn';
 
 const UnauthenticatedRoutes = () => (
   <>
     <Switch>
       <Route path="/signup">
         <SignUp />
+      </Route>
+      <Route exact path="/signin">
+        <SignIn />
       </Route>
     </Switch>
   </>
