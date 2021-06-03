@@ -1,12 +1,13 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import useSignUp from '../hooks/useSignUp';
 import validateEmail from '../utils/validation';
 import ErrorText from './ErrorText';
+import { AuthContext } from '../context/authContext';
 
 const SignUpForm = () => {
+  const auth = useContext(AuthContext);
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState(null);
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ const SignUpForm = () => {
   const [pww, setPww] = useState('');
   const [pwwError, setPwwError] = useState(null);
   const {
-    mutate, isLoading, isError, error, data,
+    mutate, isError, error, data,
   } = useSignUp();
 
   useEffect(() => {
@@ -26,7 +27,11 @@ const SignUpForm = () => {
         setEmailError('Email has already been taken');
       }
     }
-  }, [isError]);
+    if (data) {
+      const { auth_token: authToken, user_info: userInfo } = data.data;
+      auth.loginHelper(authToken, userInfo || {});
+    }
+  }, [isError, data]);
 
   const validateFields = () => {
     setNameError('');
