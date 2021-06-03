@@ -5,6 +5,7 @@ import { AuthContext } from './context/authContext';
 import SignUp from './pages/SignUp';
 import AppShell from './AppShell';
 import SignIn from './pages/SignIn';
+import Home from './pages/Home';
 
 const UnauthenticatedRoutes = () => (
   <>
@@ -28,7 +29,7 @@ const AuthenticatedRoute = ({ children, ...rest }) => {
       render={() => (auth.isAuthenticated() ? (
         <AppShell>{children}</AppShell>
       ) : (
-        <Redirect to="/" />
+        <Redirect to="/signin" />
       ))}
     />
   );
@@ -46,8 +47,8 @@ const AppRoutes = () => (
   <>
     <Suspense fallback={<LoadingFallback />}>
       <Switch>
-        <AuthenticatedRoute path="/auth">
-          <h1>You in </h1>
+        <AuthenticatedRoute exact path="/">
+          <Home />
         </AuthenticatedRoute>
         <UnauthenticatedRoutes />
       </Switch>
