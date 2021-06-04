@@ -1,12 +1,9 @@
-import { useSelector } from 'react-redux';
+import CarList from '../components/CarList';
 
-const Home = () => {
-  const name = useSelector((state) => state.auth.userInfo.name);
-  return (
-    <div className="container">
-      {name}
-    </div>
-  );
-};
+const Home = () => (
+  <div className="container">
+    <CarList />
+  </div>
+);
 
 export default Home;
