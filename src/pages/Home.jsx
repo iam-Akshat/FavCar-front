@@ -1,9 +1,13 @@
 import CarList from '../components/CarList';
+import Navbar from '../components/Navbar';
 
 const Home = () => (
-  <div className="container">
-    <CarList />
-  </div>
+  <>
+    <Navbar />
+    <div className="container">
+      <CarList />
+    </div>
+  </>
 );
 
 export default Home;
