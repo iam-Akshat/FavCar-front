@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { isExpired } from 'react-jwt';
 import { login, logout } from '../state/slices/authSlice';
@@ -8,18 +8,20 @@ const AuthContext = createContext();
 const { Provider } = AuthContext;
 
 const AuthProvider = ({ children }) => {
-  const token = useSelector((state) => state.auth.token);
+  const [token, setToken] = useState(useSelector((state) => state.auth.token));
   const dispatch = useDispatch();
 
   const loginHelper = (token, userInfo) => {
-    dispatch(login({ token, userInfo }));
+    setToken(token);
     localStorage.setItem('token', token);
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    dispatch(login({ token, userInfo }));
   };
 
   const isAuthenticated = () => {
-    if (!token) return false;
-    if (isExpired(token)) return false;
+    const actualToken = window.localStorage.getItem('token') || token;
+    if (!actualToken) return false;
+    if (isExpired(actualToken)) return false;
     return true;
   };
 

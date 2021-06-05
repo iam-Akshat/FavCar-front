@@ -8,6 +8,8 @@ import useSignIn from '../hooks/useLogin';
 import { AuthContext } from '../context/authContext';
 
 const SignInForm = () => {
+  const [red, setRed] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [pw, setPw] = useState('');
@@ -48,6 +50,8 @@ const SignInForm = () => {
     if (data) {
       const { auth_token: authToken, user_info: userInfo } = data.data;
       auth.loginHelper(authToken, userInfo || {});
+      setSuccess(true);
+      setTimeout(() => { setRed(true); }, 1000);
     }
   }, [data]);
   const handleSubmit = (e) => {
@@ -57,10 +61,13 @@ const SignInForm = () => {
     }
   };
   if (auth.isAuthenticated() || (data && data.data.auth_token)) {
-    return <Redirect to="/" />;
+    if (red) {
+      return (<Redirect to="/" />);
+    }
   }
   return (
     <form className="container" onSubmit={handleSubmit}>
+      {success ? (<div className="text-success">Redirecting...</div>) : null}
       <ErrorText error={signInError} />
       <div className="form-floating mb-3">
         <input
