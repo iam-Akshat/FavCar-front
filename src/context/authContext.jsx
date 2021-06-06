@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { createContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { isExpired } from 'react-jwt';
-import { login, logout } from '../state/slices/authSlice';
+import { login, logout } from '../state/slices/auth';
 
 const AuthContext = createContext();
 const { Provider } = AuthContext;
