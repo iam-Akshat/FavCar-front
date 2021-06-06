@@ -2,6 +2,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Suspense, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { AuthContext } from './context/authContext';
+import CarDetail from './pages/CarDetail';
 import SignUp from './pages/SignUp';
 import AppShell from './AppShell';
 import SignIn from './pages/SignIn';
@@ -49,6 +50,9 @@ const AppRoutes = () => (
       <Switch>
         <AuthenticatedRoute exact path="/">
           <Home />
+        </AuthenticatedRoute>
+        <AuthenticatedRoute exact path="/cars/:id">
+          <CarDetail />
         </AuthenticatedRoute>
         <UnauthenticatedRoutes />
       </Switch>
