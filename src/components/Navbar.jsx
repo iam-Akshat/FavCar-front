@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
 
 const Navbar = () => {
   const name = useSelector((state) => state.auth.userInfo.name);
+  const { logoutHelper } = useContext(AuthContext);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
@@ -17,6 +20,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link to="/" href="/" className="nav-link">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signin" href="/signin" className="nav-link" onClick={logoutHelper}>Logout</Link>
             </li>
           </ul>
         </div>
