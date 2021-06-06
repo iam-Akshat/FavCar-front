@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import AppShell from './AppShell';
 import SignIn from './pages/SignIn';
 import Home from './pages/Home';
+import Favourites from './pages/Favourites';
 
 const UnauthenticatedRoutes = () => (
   <>
@@ -53,6 +54,9 @@ const AppRoutes = () => (
         </AuthenticatedRoute>
         <AuthenticatedRoute exact path="/cars/:id">
           <CarDetail />
+        </AuthenticatedRoute>
+        <AuthenticatedRoute exact path="/favourites">
+          <Favourites />
         </AuthenticatedRoute>
         <UnauthenticatedRoutes />
       </Switch>
