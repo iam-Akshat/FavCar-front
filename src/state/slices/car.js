@@ -16,7 +16,17 @@ export const carSlice = createSlice({
       const { id, data } = action.payload;
       state.carDetails[id] = data;
     },
+    addFav: (state, action) => {
+      const { id } = action.payload;
+      state.carDetails[id].user_liked = true;
+    },
+    removeFav: (state, action) => {
+      const { id } = action.payload;
+      state.carDetails[id].user_liked = false;
+    },
   },
 });
-export const { addCarDetails, addCarPreviews } = carSlice.actions;
+export const {
+  addCarDetails, addCarPreviews, addFav, removeFav,
+} = carSlice.actions;
 export default carSlice.reducer;
