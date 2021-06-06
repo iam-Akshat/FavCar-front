@@ -4,7 +4,7 @@ import CarPreview from './CarPreview';
 import 'react-multi-carousel/lib/styles.css';
 
 const CarList = () => {
-  const { data, error, isLoading } = useGetCars();
+  const { data, error, isLoading } = useGetCars('/cars');
 
   if (isLoading) return (<h1>Loading...</h1>);
   if (error) return (<h1>{error}</h1>);
