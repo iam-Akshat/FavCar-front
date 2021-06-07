@@ -36,6 +36,8 @@ const CarDetail = () => {
       <CarPageNavbar name={(car.name) || ''} />
       <div className="w-100">
         <img src={car.image_url} alt={car.name} className="img w-100 h-50" style={{ maxWidth: '500px' }} />
+        <p className="text-center mt-1">{car.description}</p>
+        <p className="text-center mt-1">{`$ ${car.price}`}</p>
       </div>
       <CarFavUnfavBtn id={car.id} liked={isLiked === true} />
     </>
