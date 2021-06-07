@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Car Bookmarks (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Car bookmarking site with authentication madw with React.
+User can signin and signup. Access cars and add and remove them from their favourites
+and also exclusively browse favourites.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Libraries used
 
-### `npm start`
+- redux
+- react-router-dom
+- bootstrap
+- react-query
+- react-multi-carousel
+- axios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Live demo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Click here](https://awesome-tesla-2329da.netlify.app/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone the repo `https://github.com/iam-Akshat/final-front.git`
+- `cd` into the project
+- Run `npm install` to install all the dependencies
+- Run `npm start`
 
-### `npm run build`
+## Deployment
+ This is uploaded on Netlify. Check out Netlify for how to deploy your own version.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing
+Uses default create-react-app testing libraries
+- redux-mock-store for mocking store
+- history when testing react-router-dom related functionalities
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 **Akshat Sethi**
 
-### `npm run eject`
+- Github: [iam-Akshat](https://github.com/iam-Akshat)
+- Twitter: [Akshat Sethi](https://twitter.com/akshatsethi)
+- LinkedIn: [Akshat Sethi](https://linkedin.com/in/akshatsethi)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fork the project
+- Create your feature branch `git checkout -b awesome-feature`
+- Commit your changes `git commit -m 'Awesome feature'`
+- Push it `git push -u origin awesome-feature`
+- Open a pull request using this branch
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Acknowledgements
+- [Microverse](https://www.notion.so/Final-Capstone-Project-Find-Your-House-9a424802e7dc48eb8ef40e2ac09397d1#b2e5bb2a2369412a8ee0f270706043e9)
+## Show your support
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
