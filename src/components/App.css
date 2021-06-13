@@ -4,3 +4,11 @@
 .remove-border{
   border: none !important;
 }
+
+.mb-none{
+  margin-bottom: 0 !important;
+}
+
+.text-sm{
+  font-size: 0.75rem;
+}
