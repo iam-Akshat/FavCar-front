@@ -11,7 +11,7 @@ const CarPreview = ({
       <div className="card-body d-flex justify-content-between">
         <div className="left">
           <p className="card-text text-dark mb-none">{name}</p>
-          <OutOfFiveRating rating={Math.ceil(Math.random() * 5)} />
+          <OutOfFiveRating rating={4} />
         </div>
         <div className="right">
           <p className="card-text text-dark mb-none">{`$ ${price}`}</p>
