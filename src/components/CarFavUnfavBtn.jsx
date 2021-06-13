@@ -46,16 +46,17 @@ const CarFavUnfavBtn = ({ id, liked }) => {
   };
 
   return (
-    <>
+    <div className="fixed-bottom fav-btn">
       <button
         type="button"
-        className={`btn ${isFav ? 'btn-danger' : 'btn-primary'} w-100 mt-1`}
+        className={`btn ${isFav ? 'btn-warning' : 'btn-orange'} w-100 mt-1`}
         onClick={handleClick}
+        style={{ borderRadius: '0' }}
       >
         {isFav ? 'remove from favs' : 'add to favs'}
       </button>
       <p>{error}</p>
-    </>
+    </div>
   );
 };
 

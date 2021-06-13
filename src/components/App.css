@@ -1,14 +1,28 @@
 * {
   font-family: sans-serif;
 }
-.remove-border{
+
+.remove-border {
   border: none !important;
 }
 
-.mb-none{
+.mb-none {
   margin-bottom: 0 !important;
 }
 
-.text-sm{
+.text-sm {
   font-size: 0.75rem;
+}
+
+.text-m {
+  font-size: 0.9rem;
+}
+
+.btn-orange {
+  background-color: #ff6026;
+  color: white;
+}
+
+.fav-btn {
+  height: 2.7rem;
 }
