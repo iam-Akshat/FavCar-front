@@ -66,14 +66,14 @@ const SignInForm = () => {
     }
   }
   return (
-    <form className="container" onSubmit={handleSubmit}>
+    <form className="container d-flex flex-column align-items-center justify-items-center" onSubmit={handleSubmit}>
       {success ? (<div className="text-success">Redirecting...</div>) : null}
       <ErrorText error={signInError} />
       <div className="form-floating mb-3">
         <input
           name="email"
           type="email"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="email"
           placeholder="name@example.com"
           value={email}
@@ -86,7 +86,7 @@ const SignInForm = () => {
         <input
           name="password"
           type="password"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="password"
           placeholder="Password"
           value={pw}
@@ -95,7 +95,7 @@ const SignInForm = () => {
         <label htmlFor="password">A strong password</label>
         <ErrorText error={pwError} />
       </div>
-      <button className="btn btn-primary" type="submit">Sign In</button>
+      <button className="btn rounded" type="submit">Sign In</button>
     </form>
   );
 };

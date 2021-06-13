@@ -26,3 +26,59 @@
 .fav-btn {
   height: 2.7rem;
 }
+
+.auth-page {
+  position: relative;
+  height: 100vh;
+}
+
+.form-floating {
+  width: 80% !important;
+}
+
+.auth-page img {
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0.33;
+}
+
+.auth-page form {
+  position: relative;
+  z-index: 100;
+}
+
+.auth-page a {
+  z-index: 1;
+}
+
+.auth-page form input {
+  border-radius: 50px !important;
+  background-color: rgba(238, 238, 238, 0.1);
+  border: #000 1px solid;
+}
+
+.auth-page form input:focus {
+  background-color: rgba(238, 238, 238, 0.1);
+}
+
+.auth-page form input[type="password"] {
+  border: #ff6026 1px solid;
+  color: #ff4e0e;
+}
+
+.auth-page form .btn {
+  border-radius: 50px !important;
+  width: 6rem;
+  background-color: #ff6026;
+  box-shadow: #ff6026 3px 5px 1rem;
+  border: none !important;
+  color: white;
+}
+
+.auth-page form .btn:hover {
+  background-color: #ff4e0e;
+}

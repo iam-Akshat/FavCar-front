@@ -78,12 +78,12 @@ const SignUpForm = () => {
     return <Redirect to="/" />;
   }
   return (
-    <form className="container" onSubmit={handleSubmit}>
+    <form className="container  d-flex flex-column align-items-center justify-items-center" onSubmit={handleSubmit}>
       <div className="form-floating mb-3">
         <input
           name="name"
           type="text"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="name"
           placeholder="Your name"
           value={name}
@@ -96,7 +96,7 @@ const SignUpForm = () => {
         <input
           name="email"
           type="email"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="email"
           placeholder="name@example.com"
           value={email}
@@ -109,7 +109,7 @@ const SignUpForm = () => {
         <input
           name="password"
           type="password"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="password"
           placeholder="Password"
           value={pw}
@@ -122,7 +122,7 @@ const SignUpForm = () => {
         <input
           name="password_confirmation"
           type="password"
-          className="form-control"
+          className="form-control shadow-none px-5"
           id="password_confirmation"
           placeholder="Password"
           value={pww}
