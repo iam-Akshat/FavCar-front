@@ -15,7 +15,7 @@ const OutOfNRating = ({ rating, maxRating }) => {
   }
 
   return (
-    <div className="rating">{stars}</div>
+    <div className="rating" data-testid="rating">{stars}</div>
   );
 };
 
