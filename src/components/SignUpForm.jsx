@@ -9,13 +9,13 @@ import { AuthContext } from '../context/authContext';
 const SignUpForm = () => {
   const auth = useContext(AuthContext);
   const [name, setName] = useState('');
-  const [nameError, setNameError] = useState(null);
+  const [nameError, setNameError] = useState('');
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState(null);
+  const [emailError, setEmailError] = useState('');
   const [pw, setPw] = useState('');
-  const [pwError, setPwError] = useState(null);
+  const [pwError, setPwError] = useState('');
   const [pww, setPww] = useState('');
-  const [pwwError, setPwwError] = useState(null);
+  const [pwwError, setPwwError] = useState('');
   const {
     mutate, isError, error, data,
   } = useSignUp();
@@ -43,26 +43,26 @@ const SignUpForm = () => {
       setNameError('Name is required');
       hasErrors = true;
     } else {
-      setNameError(null);
+      setNameError('');
     }
     if (pw.trim().length < 6) {
       setPwError('A valid password needs to be atleast 6 characters');
       hasErrors = true;
     } else {
-      setPwError(null);
+      setPwError('');
     }
     if (pw !== pww) {
       setPwwError('Passwords dont match');
       hasErrors = true;
     } else {
-      setPwwError(null);
+      setPwwError('');
     }
 
     if (!(email && validateEmail(email.trim()))) {
       setEmailError('A valid email is required');
       hasErrors = true;
     } else {
-      setEmailError(null);
+      setEmailError('');
     }
     return hasErrors;
   };
