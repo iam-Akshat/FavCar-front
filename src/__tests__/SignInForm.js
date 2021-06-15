@@ -8,7 +8,7 @@ const initialState = {
   auth: {},
 };
 
-describe('SignUpForm', () => {
+describe('SignIpForm', () => {
   const mockStore = createStore([]);
   describe('form validations', () => {
     beforeEach(() => {
@@ -17,7 +17,7 @@ describe('SignUpForm', () => {
       appRenderer(<SignInForm />, store);
     });
     it('shows errors when empty fields', () => {
-      const submitButton = screen.getByText('Sign Up');
+      const submitButton = screen.getByText('Sign In');
       event.click(submitButton);
 
       expect(screen.getByText('A valid email is required')).toBeInTheDocument();
