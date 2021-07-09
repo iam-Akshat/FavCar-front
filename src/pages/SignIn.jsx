@@ -3,7 +3,7 @@ import SignInForm from '../components/SignInForm';
 import bgImg from '../assets/bg.jpg';
 
 const SignIn = () => (
-  <div className="container auth-page d-flex flex-column justify-content-center align-items-center">
+  <div className="container-fluid auth-page d-flex flex-column justify-content-center align-items-center">
     <img src={bgImg} alt="" />
     <h1 className="text-center mb-5">Sign In</h1>
     <SignInForm />

@@ -36,9 +36,9 @@ const CarDetail = () => {
   return (
     <>
       <CarPageNavbar name={(car.name) || ''} />
-      <div className="w-100">
+      <div className="w-100 car-detail-holder mx-auto">
         <div className="img_holder position-relative">
-          <img src={car.image_url} alt={car.name} className="img w-100" style={{ maxWidth: '500px' }} />
+          <img src={car.image_url} alt={car.name} className="img w-100" />
           <div className="img_details position-absolute w-100 d-flex justify-content-between align-items-center px-2" style={{ bottom: '5px', color: 'white' }}>
             <div className="left">
               <p className="card-text mb-none">{car.manufacturer}</p>

@@ -6,7 +6,7 @@ const CarPreview = ({
   id, name, imageUrl, price,
 }) => (
   <Link href={`/cars/${id}`} to={`/cars/${id}`} className="text-decoration-none">
-    <div className="card shadow-lg" style={{ width: '80vw', maxWidth: '600px' }}>
+    <div className="card card-preview shadow-lg">
       <img className="card-img-top" src={imageUrl} alt={name} />
       <div className="card-body d-flex justify-content-between">
         <div className="left">
