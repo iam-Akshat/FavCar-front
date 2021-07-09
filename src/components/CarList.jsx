@@ -1,5 +1,6 @@
 import Carousel from 'react-multi-carousel';
 import { useState, useEffect } from 'react';
+import useMediaQuery from '../utils/useMediaQuery';
 import useGetCars from '../hooks/useGetCars';
 import CarPreview from './CarPreview';
 import 'react-multi-carousel/lib/styles.css';
@@ -9,6 +10,7 @@ const CarList = () => {
   const [totalCars, setTotalCars] = useState();
   const [curCarNum, setCurCarNum] = useState(1);
 
+  const isDesktop = useMediaQuery('(min-width: 700px)');
   useEffect(() => {
     if (data) {
       setTotalCars(data.data.length);
@@ -41,7 +43,7 @@ const CarList = () => {
         additionalTransfrom={0}
         afterChange={handleCarChange}
         autoPlaySpeed={3000}
-        centerMode={false}
+        centerMode={isDesktop}
         className=""
         containerClass="container mb-1 h-75"
         dotListClass=""
@@ -50,7 +52,7 @@ const CarList = () => {
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        partialVisible
+        partialVisible={!isDesktop}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
         responsive={{
@@ -59,8 +61,8 @@ const CarList = () => {
               max: 3000,
               min: 1024,
             },
-            items: 3,
-            partialVisibilityGutter: 40,
+            items: 1,
+            partialVisibilityGutter: 50,
           },
           mobile: {
             breakpoint: {
