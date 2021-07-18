@@ -4,6 +4,11 @@ A Car bookmarking site with authentication madw with React.
 User can signin and signup. Access cars and add and remove them from their favourites
 and also exclusively browse favourites.
 
+## Preview
+![home screen](./readme/favcar-home-iphone.png)
+![detail screen](./readme/favcar-cardetail-iphone.png)
+![login screen](./readme/favcar-login-iphone.png)
+
 
 ## Libraries used
 
